@@ -27,8 +27,6 @@ if(UNIX OR MINGW)
 endif()
 
 file(MAKE_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/libsentences")
-re2c("${CMAKE_CURRENT_SOURCE_DIR}/libsentences/whitespace_tokenizer.rr.cpp"
-    "${CMAKE_CURRENT_BINARY_DIR}/libsentences/whitespace_tokenizer.cpp")
 re2c("${CMAKE_CURRENT_SOURCE_DIR}/libsentences/standard_tokenizer.rr.cpp"
     "${CMAKE_CURRENT_BINARY_DIR}/libsentences/standard_tokenizer.cpp")
 
@@ -39,8 +37,7 @@ add_library(sentences
     libsentences/text_sentences.cpp
     libsentences/quotes_detector.cpp
     libsentences/sbd_model.cpp
-    libsentences/standard_tokenizer.cpp
-    libsentences/whitespace_tokenizer.cpp)
+    libsentences/standard_tokenizer.cpp)
 
 add_executable(sentence_splitter sentence_splitter.cpp)
 target_link_libraries(sentence_splitter sentences ${libs})

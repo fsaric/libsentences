@@ -32,7 +32,6 @@ either expressed or implied, of Frane Saric.
 #include <libsentences/sbd_context.h>
 
 #include <libsentences/standard_tokenizer.h>
-#include <libsentences/whitespace_tokenizer.h>
 #include <libsentences/memory_pool.h>
 
 #include <algorithm>
