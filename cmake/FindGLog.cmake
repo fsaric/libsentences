@@ -1,0 +1,28 @@
+# - Find glog
+# Find the glog includes and library
+#
+#  GLOG_INCLUDE_DIR - where to glog/logging.h, etc.
+#  GLOG_LIBRARY        - glog library
+#  GLOG_FOUND       - True if glog found.
+
+
+IF(GLOG_INCLUDE_DIR)
+    SET(GLOG_FIND_QUIETLY TRUE)
+ENDIF(GLOG_INCLUDE_DIR)
+
+FIND_PATH(GLOG_INCLUDE_DIR glog/logging.h)
+
+FIND_LIBRARY(GLOG_LIBRARY glog)
+
+# handle the QUIETLY and REQUIRED arguments and set ICONV_FOUND to TRUE if 
+# all listed variables are TRUE
+INCLUDE(FindPackageHandleStandardArgs)
+FIND_PACKAGE_HANDLE_STANDARD_ARGS(GLOG DEFAULT_MSG GLOG_INCLUDE_DIR)
+
+IF(GLOG_FOUND AND GLOG_LIBRARY)
+    SET(GLOG_LIBRARY "${GLOG_LIBRARY}")
+ELSE(GLOG_FOUND AND GLOG_LIBRARY)
+    SET(GLOG_LIBRARY)
+ENDIF(GLOG_FOUND AND GLOG_LIBRARY)
+
+MARK_AS_ADVANCED(GLOG_LIBRARY GLOG_INCLUDE_DIR GLOG_LIBRARY)
