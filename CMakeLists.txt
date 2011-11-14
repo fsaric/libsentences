@@ -1,4 +1,9 @@
 cmake_minimum_required(VERSION 2.8)
+if(NOT DEFINED CMAKE_BUILD_TYPE)
+    set(CMAKE_BUILD_TYPE Release CACHE STRING "Choose the type of
+    build, options are: None(CMAKE_CXX_FLAGS or CMAKE_C_FLAGS used) Debug
+    Release RelWithDebInfo MinSizeRel.")
+endif()
 project(libsentences)
 
 set(CMAKE_MODULE_PATH "${CMAKE_MODULE_PATH};${CMAKE_CURRENT_SOURCE_DIR}/cmake")
