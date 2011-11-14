@@ -16,6 +16,15 @@ sentences. The parameters it learns can be saved and reused later.
 -  Drugi zapisnik odnosi se na sastanak Povjerenstva za radiologiju i Upravnog odbora Hrvatskog društva radiologa, održan u Ministarstvu zdravstva, 18. lipnja 2008.
 -  U njemu uz ostalo stoji: “Prof. Brkljačić navodi tvrdnju da PET/CT u RH imaju privatne ustanove, a ne javne ustanove, što predstavlja izvrnutu vrijednost budući da je, primjerice u Austriji, obrnuto”.
 
+License
+-------
+
+libsentences is covered by Simplified BSD License (2-clause license). You can
+find the license text in file
+[LICENSE.txt](https://raw.github.com/fsaric/libsentences/master/LICENSE.txt).
+In order to read Unicode character properites libsentences uses libunistring,
+which is covered by the GNU Lesser General Public License (LGPL).
+
 Performance
 -----------
 libsentences processes approximately 500 000 sentences / second using a single
