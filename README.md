@@ -86,8 +86,7 @@ int main() {
 }
 ```
 
-Compiling (assuming you are in build directory):
+Compiling (assuming you are in the build directory):
 
     cd ..
-    g++ -o example example.cpp -I. build/libsentences.a -lunistring
-
+    g++ -std=c++0x example.cpp -o example -I. build/libsentences.a -lunistring
